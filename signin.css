@@ -6,26 +6,22 @@
   
   html, body{
     height: 100%;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   }
 
-  .header {
-    display: inline-flex;
+  header {
     justify-content: space-between;
     width: 100%;    
-    height: 120px;    
     margin-bottom: 3px;
-    background-color:rgb(48, 139, 48);
+    background-color:forestgreen;
     display: flex;
     padding: 10px;
   }
   
+   
   .wrapper__logo {
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    color: rgb(229, 231, 229);
-  }
-  
-  .wrapper__logo a {
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    width: 300px;
+    padding: 20px;
     font-size: 80px;
     font-variant: small-caps;
     color:  rgb(238, 238, 238); 
@@ -34,9 +30,16 @@
     padding: 10px 30px;
   }
   
+  
+  .wrapper__auth{
+    display:flex;
+    flex-direction: row;
+    justify-content: end;
+  }
+  
   .auth_buttons{
-    margin-top: 20px;
-    margin-right: 20px;
+    display: flex;
+    align-items: center;
   }
   
  .auth_buttons button{
@@ -47,7 +50,7 @@
   height: 40px;
   font-size: 20px;
   border: none;
-  background-color: #39742e;
+  background-color: darkgreen;
   border-radius: 5px;
 
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4); 
@@ -56,42 +59,40 @@
     cursor: pointer;
    }
 
-   .container {
-    display: flex;
+
+.wrapper__signin{
+  display: flex;
     align-items:flex-start;
     justify-content:center;
     width: 100%;
     margin-top: 50px;
-    height: 180px;
-    padding: 10px;
-  
-  }
-  
-  .modal{
+
+}
+
+   .main {
     display: flex;
     flex-direction: column;
-    height: 350px;
-    width: 320px;
-    border: solid 1px rgb(25, 110, 29);
-    padding: 20px;
+    justify-content: center;
+    width: 100%;
+    margin: 0 30px 0 30px;
+    padding: 30px;
+    
+    border: solid 1px darkgreen;
     border-radius: 10px; 
     -webkit-border-radius: 10px; 
     -moz-border-radius: 10px; 
-    margin: 0px 0px 10px 0px; 
     border: 1px solid rgb(6, 68, 6); 
     background: rgb(199, 238, 199);
     box-shadow: inset 0px 0px 15px rgb(199, 238, 199); 
     -moz-box-shadow: inset 0px 0px 15px rgb(199, 238, 199); 
     -webkit-box-shadow: inset 0px 0px 15px rgb(199, 238, 199);
+  
   }
   
-  .wrapper {
-    flex: 1;
-  }
+
   
   .wrapper__output {
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    color:rgb(25, 110, 29);
+    color:darkgreen;
     font-size: 20px;
     margin-top: 20px;
     height: 70px;
@@ -102,18 +103,17 @@
   .article__title{
     display: flex;
     justify-content: center;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     color:rgb(25, 110, 29);
   }
 
 
 
-  .wrapper__output input[type="submit"]{
+  .main input[type="submit"]{
     padding: 10px;
     text-decoration: none;
     color: #fff;
     border: none;
-    background-color: #39742e;
+    background-color: darkgreen;
     border-radius: 5px;
     font-size: 20px;
   
@@ -125,7 +125,7 @@
   cursor: pointer;
   }
 
-  input[type=text], input[type=username] { 
+  .main input[type=text], input[type=username] { 
     width: 100%; 
     padding: 15px; 
     margin: 5px 0 22px 0; 
@@ -134,13 +134,13 @@
     background: #f1f1f1; 
 } 
  
-input[type=text]:focus, input[type=username]:focus { 
+.main input[type=text]:focus, input[type=username]:focus { 
     background-color: rgb(148, 211, 153); 
     outline: none;
 }
 
 
-  input[type=text], input[type=password] { 
+.main input[type=text], input[type=password] { 
     width: 100%; 
     padding: 15px; 
     margin: 5px 0 22px 0; 
@@ -149,7 +149,7 @@ input[type=text]:focus, input[type=username]:focus {
     background: #f1f1f1; 
 } 
  
-input[type=text]:focus, input[type=password]:focus { 
+.main input[type=text]:focus, input[type=password]:focus { 
     background-color: rgb(173, 212, 170); 
     outline: none;
 }
