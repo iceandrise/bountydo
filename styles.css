@@ -2,52 +2,56 @@
   padding: 0;
   margin: 0;
 }
-.main{
+.main__wrapper{
   display:flex;
   flex-direction: column;
 
 }
 html, body{
   height: 100%;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
-.header {
-
+header {
   justify-content: space-between;
-  width: 100%;
-  background-color:rgb(48, 139, 48);
+  width: 100%;    
+  margin-bottom: 3px;
+  background-color:forestgreen;
   display: flex;
   padding: 10px;
 }
 
 
 .wrapper__logo {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  color: rgb(229, 231, 229);
-}
-
-.wrapper__logo a {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  width: 300px;
+  padding: 20px;
   font-size: 80px;
   font-variant: small-caps;
   color:  rgb(238, 238, 238); 
   text-decoration: none;
   cursor: pointer;
   padding: 10px 30px;
+
+}
+
+
+.wrapper__auth{
+  display:flex;
+  flex-direction: row;
+  justify-content: end;
 }
 
 .auth_buttons{
   display: flex;
   align-items: center;
-  
 }
 
-.main__row {
+.main {
   display: flex;
   padding: 10px;
 }
 
-.container {
+.counter__container, .filter__container, .collection__container {
   display: flex;
   flex: 1;
 
@@ -59,7 +63,7 @@ html, body{
 
 }
 
-.modal{
+.counter{
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -69,7 +73,7 @@ html, body{
   -moz-border-radius: 10px; 
   
   margin: 0px 0px 10px 0px; 
-  border: 1px solid rgb(6, 68, 6); 
+  border: 1px solid darkgreen;
   background: rgb(199, 238, 199);
 
   box-shadow: inset 0px 0px 15px rgb(199, 238, 199); 
@@ -90,7 +94,7 @@ html, body{
 }
 
 
-.wrapper__output, .wrapper__collect {
+.wrapper__counter, .wrapper__collect {
   display: inline-flex;
   justify-content: space-between;
   font-size: 20px;
@@ -98,7 +102,7 @@ html, body{
 }
 
 
-.cut {
+.output__field {
   height: 30px;
   width: 30px; 
   margin-right: 10px;
@@ -107,17 +111,15 @@ html, body{
   background-color: azure;
 }
 
-.modal__title, .filter__title, .collect__title{
+.counter__title, .filter__title, .collect__title{
   display: flex;
   justify-content: center;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  color:rgb(25, 110, 29);
+  color:darkgreen;
 }
 
 
-.wrapper__output_suffix, .wrapper__output_postfix, .wrapper__time {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  color:rgb(25, 110, 29);
+.wrapper__counter_completed, .wrapper__counter_remaining, .wrapper__output_count, .wrapper__time {
+  color:darkgreen;
 }
 
 .filter{
@@ -141,8 +143,7 @@ html, body{
 .tagfilter__title{
   display: flex;
   justify-content: center;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  color:rgb(25, 110, 29);
+  color:darkgreen;
   margin: 10px 0;
 }
 
@@ -170,7 +171,7 @@ html, body{
   
   margin: 0 0px 10px 0px; 
   
-  border: 1px solid rgb(6, 68, 6); 
+  border: 1px solid darkgreen;
   
   background: rgb(199, 238, 199);
   
@@ -203,7 +204,7 @@ html, body{
   -webkit-border-radius: 10px; 
   -moz-border-radius: 10px; 
 
-  border: 1px solid rgb(6, 68, 6); 
+  border: 1px solid darkgreen;
   
   background: rgb(199, 238, 199);
   
@@ -216,7 +217,7 @@ html, body{
   display: flex;
   justify-content: center;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  color:#39742e;
+  color:darkgreen;
 }
 
 
@@ -249,7 +250,7 @@ html, body{
   text-decoration: none;
   color: #fff;
   border: none;
-  background-color: #39742e;
+  background-color: darkgreen;
   border-radius: 5px;
   font-size: 17px;
   text-align: center;
@@ -295,7 +296,7 @@ textarea{
 }
 
 @media (max-width: 1325px) {
-  .main__row {
+  .main {
     flex-direction: column;
     align-items: center;
   }
@@ -317,7 +318,7 @@ textarea{
   .wrapper__logo a{
     font-size: 45px;
   }
-  .main__row{
+  .main{
     width: 100%;
   }
   .general__wrapper {
@@ -341,10 +342,10 @@ textarea{
    .general__task__wrapper{
      width: 50%;
    }
-   .main{
+   .main__wrapper{
     width: 50%;
    }
-  .create_task__title, .modal__title, .filter__title, .collect__title{
+  .create_task__title, .counter__title, .filter__title, .collect__title{
     font-size: 20px;
   }
 }
@@ -361,10 +362,10 @@ textarea{
     align-items:center;
     
   }
-  .main{
+  .main__wrapper{
    width: 50%;
   }
-  .create_task__title, .modal__title, .filter__title, .collect__title{
+  .create_task__title, .counter__title, .filter__title, .collect__title{
     font-size: 15px;
   }
   .button{
