@@ -127,49 +127,51 @@
         <form action = "index.html">
         <div class="task">
           <h1 class="create_task__title">Create task</h1>
-          <div class="general__wrapper">
+          <div class="general1__wrapper">
             <div class="create__task">
               <div class="create__task__wrapper">
-                <input type="name" placeholder="Enter name" name="name" required>
+                <input type="name" placeholder="Enter name" name="name" id = "name" required>
 
                 <div class="wrapper__filter">
                   <label class="radio__wrapper">
-                    <input type="radio" name="work" />
+                    <input type="radio" name="work" id="radio__create" />
                     Work
                   </label>
 
                   <label class="radio__wrapper">
-                    <input type="radio" name="rest" />
+                    <input type="radio" name="rest" id="radio__create" />
                     Rest
                   </label>
                   <label class="radio__wrapper">
-                    <input type="radio" name="family" />
+                    <input type="radio" name="family" id="radio__create" />
                     Family
                   </label>
 
                   <label class="radio__wrapper">
-                    <input type="radio" name="shopping" />
+                    <input type="radio" name="shopping" id="radio__create"/>
                     Shopping
                   </label>
                   <label class="radio__wrapper">
-                    <input type="radio" name="celebration" />
+                    <input type="radio" name="celebration" id="radio__create" />
                     Celebration
                   </label>
 
                   <label class="radio__wrapper">
-                    <input type="radio" name="help" />
+                    <input type="radio" name="help" id="radio__create" />
                     Help
                   </label>
                 </div>
                 <div class="description__task">
-                  <textarea type="description" placeholder="Enter description" name="dscr" required></textarea>
+                  <textarea type="description" placeholder="Enter description" name="dscr" id= "dscr" required></textarea>
                 </div>
               </div>
               <div class="time__task">
+                <label class="wrapper__prior">Priority</label>
+                <input class = "prior" id = "prior" type="checkbox">
                 <label class="wrapper__time">Time</label>
-                <input type="time" name="cron" value="03:15" min="00:01" max="06:00">
-                <input type="time" name="cron" value="03:15" min="00:01" max="06:00">
-                <button class="button">Create</button>
+                <input type="time" name="cron" id="cron1" value="03:15" min="00:01" max="06:00">
+                <input type="time" name="cron" id="cron2" value="03:15" min="00:01" max="06:00">
+                <button class="button" id="button__create">Create</button>
               </div>
             </form>
             </div>
@@ -177,9 +179,10 @@
 
 
           <h1 class="create_task__title">Priority tasks</h1>
+          <div class="new__task__wrapper">
           <div class="general__wrapper">
-            <div class="create__task">
-              <div class="create__task__style">
+           <div class="create__task">
+             <!-- <div class="create__task__style">
                 <input type="name" placeholder="Enter name" name="name" value="Buy food for saturday" required>
 
                 <div class="wrapper__filter">
@@ -205,13 +208,15 @@
               <button class="button">Update</button>
               <button class="button">Comlete!</button>
               <button class="button">Delete</button>
-            </div>
-          </div>
+            </div> -->
+          </div> 
+        </div>
 
           <h1 class="create_task__title">Tasks</h1>
-          <div class="general__wrapper">
+          <div class="new__task__wrapper">
+         <div class="general__wrapper">
             <div class="create__task">
-              <div class="create__task__style">
+            <!--  <div class="create__task__style">
                 <input type="name" placeholder="Enter name" name="name" value="Water the neighbors' flowers" required>
 
                 <div class="wrapper__filter">
@@ -237,16 +242,18 @@
               <button class="button">Update</button>
               <button class="button">Comlete!</button>
               <button class="button">Delete</button>
-            </div>
-          </div>
-
-
-
+            </div> -->
+          </div> 
         </div>
+
+
+
+        </div> 
       </div>
     </div>
   </div>
 
+  <script src ="js/index.js"></script>
 
 </body>
 

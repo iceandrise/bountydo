@@ -53,7 +53,7 @@ header {
 
 .counter__container, .filter__container, .collection__container {
   display: flex;
-  flex: 1;
+
 
 
 }
@@ -102,7 +102,7 @@ header {
 }
 
 
-.output__field {
+.output__field, .prior {
   height: 30px;
   width: 30px; 
   margin-right: 10px;
@@ -239,13 +239,14 @@ header {
 
 }
 
-.wrapper__time{
+.wrapper__time, .wrapper__prior{
   font-size: 20px;
-  padding: 15px; 
+  padding: 3px; 
+  color: darkgreen;
 
 }
 
-.button {
+.button, .button__create {
   padding: 15px;
   text-decoration: none;
   color: #fff;
@@ -273,15 +274,22 @@ textarea{
 
 .button__column{
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-end;
+ 
 }
 
-.general__wrapper{
+.general__wrapper, .general1__wrapper{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   padding: 20px;
+  
 
+}
+
+.new__task__wrapper{
+  display: flex;
+  flex-direction: column;
 }
 
 .create__task__wrapper{
