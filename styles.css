@@ -278,7 +278,7 @@ textarea {
     }
 }
 
-@media (max-width: 456px) {
+@media (max-width: 490px) {
     .wrapper__logo {
         font-size: 25px;
     }

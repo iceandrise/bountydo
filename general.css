@@ -70,3 +70,44 @@ header {
     color: var(--main-bg-color);
     margin: 10px 0;
 }
+
+@media (max-width: 1325px) {
+    header {
+        width: 100%;
+    }
+}
+
+@media (max-width: 693px) {
+    header {
+        width: 100%;
+    }
+    .auth-buttons {
+        width: 50%;
+        font-size: 15px;
+    }
+}
+@media (max-width: 576px) {
+    header {
+        width: 100%;
+    }
+    .auth-buttons {
+        width: 50%;
+        font-size: 15px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        width: 100%;
+    }
+    .auth-buttons {
+        width: 50%;
+        font-size: 15px;
+        padding: 5px;
+        margin: 20px 20px 20px 20px;
+    }
+    .wrapper__logo{
+        font-size: 35px;
+    }
+}
