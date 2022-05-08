@@ -192,6 +192,11 @@
     display: flex;
     justify-content: center;
   }
+
+.checkbox__wrapper{
+    display: flex;
+    align-items: center;
+}
   
   @media (max-width: 710px) {
     .general-wrapper {
