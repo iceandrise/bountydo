@@ -21,31 +21,43 @@ const createTemplate = (task, top = false, index) => {
   <div class="create__task__style">
     <input type="name" name="name" disabled value = "${task.nameOfTask}" >
     <div class="wrapper__filter">
-      <input class="radio__create" type="checkbox" disabled ${
-        task.radio?.includes("work") && "checked"
-      }/>
-      <label for="work">Work</label>
-    <input class="radio__create" type="checkbox" disabled ${
-      task.radio?.includes("rest") && "checked"
-    } /> 
-    <label for="rest">Rest</label>
-    <input class="radio__create" type="checkbox" disabled ${
-      task.radio?.includes("shopping") && "checked"
-    } />
-    <label for="shopping">Shopping</label>
-    <input class="radio__create" type="checkbox" disabled ${
-      task.radio?.includes("family") && "checked"
-    }/>
-    <label for="family">Family</label>
-    <input class="radio__create" type="checkbox" disabled ${
-      task.radio?.includes("celebration") && "checked"
-    }/>
-    <label for="celebration">Celebration</label>
-    <input class="radio__create" type="checkbox" disabled ${
-      task.radio?.includes("help") && "checked"
-    }/>
-    <label for="help">Help</label>                               
-  </div>
+      <div class="checkbox__wrapper">
+        <input class="radio__create" type="checkbox" disabled ${
+         task.radio?.includes("work") && "checked"
+        }/>
+        <label for="work">Work</label>
+      </div>
+      <div class="checkbox__wrapper">
+        <input class="radio__create" type="checkbox" disabled ${
+          task.radio?.includes("rest") && "checked"
+        } /> 
+        <label for="rest">Rest</label>
+      </div>
+      <div class="checkbox__wrapper">
+        <input class="radio__create" type="checkbox" disabled ${
+          task.radio?.includes("shopping") && "checked"
+        } />
+        <label for="shopping">Shopping</label>
+      </div>
+      <div class="checkbox__wrapper">
+        <input class="radio__create" type="checkbox" disabled ${
+          task.radio?.includes("family") && "checked"
+        }/>
+        <label for="family">Family</label>
+      </div>
+      <div class="checkbox__wrapper">
+        <input class="radio__create" type="checkbox" disabled ${
+          task.radio?.includes("celebration") && "checked"
+        }/>
+        <label for="celebration">Celebration</label>
+      </div>
+      <div class="checkbox__wrapper">
+        <input class="radio__create" type="checkbox" disabled ${
+          task.radio?.includes("help") && "checked"
+        }/>
+        <label for="help">Help</label>  
+      </div>                             
+    </div>
   <div class="task__description">
     <textarea type="text" disabled >${task.description}</textarea>
   </div>
