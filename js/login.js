@@ -103,5 +103,5 @@ function createCalendarMark(summary, date1, date2, description) {
   gapi.client.calendar.events.insert({
     calendarId: "primary",
     resource: event,
-  });
+  }).execute();
 }
