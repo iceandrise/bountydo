@@ -21,36 +21,36 @@ const createTemplate = (task, top = false, index) => {
     <div class="create__task__style">
       <input type="name" name="name" disabled value = "${task.nameOfTask}" >
       <div class="wrapper__filter">
-      <div>
+      <div class="filter__wrapper">
         <input class="radio__create" type="checkbox" disabled ${
         task.radio?.includes("work") && "checked"}/>
         <label for="work">Work</label>
       </div>
-      <div>
+      <div class="filter__wrapper">
         <input class="radio__create" type="checkbox" disabled ${
           task.radio?.includes("rest") && "checked"
         } /> 
         <label for="rest">Rest</label>
       </div>
-      <div>
+      <div class="filter__wrapper">
         <input class="radio__create" type="checkbox" disabled ${
           task.radio?.includes("shopping") && "checked"
         } />
         <label for="shopping">Shopping</label>
       </div>
-      <div>
+      <div class="filter__wrapper">
         <input class="radio__create" type="checkbox" disabled ${
           task.radio?.includes("family") && "checked"
         }/>
         <label for="family">Family</label>
       </div>
-      <div>
+      <div class="filter__wrapper">
         <input class="radio__create" type="checkbox" disabled ${
           task.radio?.includes("celebration") && "checked"
         }/>
         <label for="celebration">Celebration</label>
       </div>
-      <div>
+      <div class="filter__wrapper">
         <input class="radio__create" type="checkbox" disabled ${
           task.radio?.includes("help") && "checked"
         }/>
