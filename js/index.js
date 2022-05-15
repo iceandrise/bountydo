@@ -70,6 +70,12 @@ addTaskBtn.addEventListener("click", (e) => {
   
   if(nameTask.value.trim().length != 0 && descrTask.value.trim().length != 0){
     if(now < start || now < end && start < end){
+      createCalendarMark(
+        nameTask?.value || "No name",
+        new Date(timeTask1?.value),
+        new Date(timeTask2?.value),
+        descrTask?.value
+      );
       tasks.default.push(
       new Task(
         nameTask?.value,
@@ -86,12 +92,6 @@ addTaskBtn.addEventListener("click", (e) => {
       );
       updateLocalStorage();
       fillHtml();
-      createCalendarMark(
-        nameTask?.value || "No name",
-        new Date(timeTask1?.value),
-        new Date(timeTask2?.value),
-        descrTask?.value
-      );
     }else {
       alert("You cannot use a date that has already passed!");
 
