@@ -1,3 +1,4 @@
+
 # 4 lab
 I made those functions that you told me about: https://github.com/iceandrise/bountydo/blob/fourth_lab/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA.PNG
 
@@ -11,3 +12,7 @@ I made those functions that you told me about: https://github.com/iceandrise/bou
 http://bountydoo.unaux.com/bountydo/
 # Mockups from second lab: 
 https://github.com/iceandrise/itirod2/blob/brr/1.jpeg and https://github.com/iceandrise/itirod2/blob/brr/tags.jpeg
+
+Курилович Карина 953504
+Link: http://bountydoo.unaux.com/bountydo/
+
