@@ -2,204 +2,312 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./styles.css" />
-    <link rel="stylesheet" href="./general.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="google-signin-client_id"
+      content="822723435779-entgq7gcoh7lsobv2pjlg1ihbevfsio6.apps.googleusercontent.com"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./general.css" />
+    <link rel="stylesheet" href="./signin.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./styles.css" />
+
     <title>BountyDo</title>
   </head>
 
   <body>
     <header>
       <div class="wrapper__logo">
-        <small class="bounty">BountyDo</small>
+        <small>BountyDo</small>
       </div>
+
       <div class="wrapper__buttons">
-        <a class="auth-buttons" href="logout.html">Log Out</a>
-        <a class="auth-buttons" href="index.html">Account</a>
+        <a class="auth-button" onclick="handleAuthClick()" id="authorize_button"
+          >Sign In</a
+        >
+        <a
+          class="auth-button"
+          id="signout_button"
+          onclick="handleSignoutClick()"
+          >Sign Out</a
+        >
       </div>
     </header>
 
-    <div class="main">
-      <div class="main-wrapper">
-        <div class="counter-container">
-          <div class="counter">
-            <h2 class="title">Counter</h2>
-            <div class="wrapper">
-              <div class="counter__content">
-                <p class="counter__content_completed">Completed tasks:</p>
-                <div class="output__field" id="completed"></div>
-              </div>
-              <div class="counter__content">
-                <p class="counter__content_remaining">Total tasks:</p>
-                <div class="output__field" id="total"></div>
-              </div>
+    <div>
+      <div class="wrapper-logout">
+        <h1 class="title">About BountyDo</h1>
+        <div class="page">
+          <ul class="page__description">
+            <div>
+              BountyDo is a task management application. After registration, you
+              will have the following options:
+              <li>
+                Hello, productive day! Create and edit tasks, specifying the
+                title, special tag (related to the field of activity),
+                description and time.
+              </li>
             </div>
-          </div>
-        </div>
 
-        <div class="filter-container">
-          <div class="filter" id="fltr">
-            <h2 class="title">Search</h2>
-            <div class="wrapper">
-              <form action="submit" class="filter-content" name="filter_search">
-                <input
-                  type="text"
-                  name="search"
-                  class="input"
-                  name="input__filter"
-                />
-                <button type="submit" class="button">
-                  Search
-                </button>
-              </form>
-              <h2 class="title">Tag filter</h2>
-              <div class="wrapper__filter">
-                <input
-                  class="check-boxes"
-                  name="work"
-                  type="checkbox"
-                  name="work"
-                />
-                <label for="work">Work</label>
-                <input class="check-boxes" type="checkbox" name="rest" />
-                <label for="rest">Rest</label>
-                <input class="check-boxes" type="checkbox" name="shopping" />
-                <label for="shopping">Shopping</label>
-                <input class="check-boxes" type="checkbox" name="family" />
-                <label for="family">Family</label>
-                <input class="check-boxes" type="checkbox" name="celebration" />
-                <label for="celebration">Celebration</label>
-                <input class="check-boxes" type="checkbox" name="help" />
-                <label for="help">Help</label>
-              </div>
-              <div class="wrapper__buttons">
-                <button class="button" id="clear">Clear</button>
-                <button class="button" id="search">Search</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="collection-container">
-          <div class="collection">
-            <h2 class="title">Collection</h2>
-            <div class="wrapper">
-              <div class="collect__content">
-                <p class="wrapper__output_count">Count of your pets:</p>
-                <div class="output__field" id="pets-count"></div>
-              </div>
-              <div class="collect__content">
-                <ul class="pets-form">
-                  <li class="pets__wrapper">
-                    <div class="pets" id="1pet"></div>
-                  </li>
-                  <li class="pets__wrapper">
-                    <div class="pets" id="2pet"></div>
-                  </li>
-                  <li class="pets__wrapper">
-                    <div class="pets" id="3pet"></div>
-                  </li>
-                  <li class="pets__wrapper">
-                    <div class="pets" id="4pet"></div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+            <li>
+              Not to forget! If among your tasks there are those that need to
+              be completed right now, then you can make them a priority by
+              clicking on the star so as not to lose them.
+            </li>
+            <li>
+              I completed the task! When the task is completed, click on the
+              “Сomplete!” button. This task will disappear, and the counter of
+              completed tasks will increase by +1.
+            </li>
+            <li>
+              I don 't need this task anymore! If you just want to delete an
+              unnecessary task - click on the “Delete” button. The completed
+              tasks counter will not increase.
+            </li>
+            <li>
+              There was not enough time yesterday! If you did not complete the
+              previous day's tasks, you will receive a warning that you probably
+              forgot to complete/delete them, so they are carried over to the
+              current day marked “Expired task”. And then you yourself choose
+              whether to delete them or complete them today.
+            </li>
+            <li>
+              Gather a collection of unique pets! This feature of the app is
+              designed to motivate you to complete more tasks in a day and
+              collect a whole collection of animals!
+            </li>
+            <li>
+              Help with finding your tasks! If your list of tasks for the day
+              is too long - use filters for tags or search by name to save time.
+            </li>
+          </ul>
         </div>
       </div>
 
-      <div class="general-task-wrapper">
-        <div class="task">
-          <form class="container-task" action="submit">
-            <h2 class="title">Create task</h2>
-            <div class="general-wrapper">
-              <div class="task-content">
-                <div class="task-wrapper">
+      <div class="main">
+        <div class="main-wrapper">
+          <div class="info-container">
+            <div class="info-wrapper">
+              <h2 class="title">Counter</h2>
+              <div class="wrapper">
+                <div class="counter__content">
+                  <p class="counter__content_completed">Completed tasks:</p>
+                  <div class="output__field" id="completed"></div>
+                </div>
+                <div class="counter__content">
+                  <p class="counter__content_remaining">Total tasks:</p>
+                  <div class="output__field" id="total"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-container">
+            <div class="info-wrapper" id="fltr">
+              <h2 class="title">Search</h2>
+              <div class="wrapper">
+                <form
+                  action="submit"
+                  class="filter-content"
+                  name="filter_search"
+                >
                   <input
-                    type="name"
-                    placeholder="Enter name"
-                    name="name"
-                    id="name"
-                    required
+                    type="text"
+                    name="search"
+                    class="input"
+                    name="input__filter"
                   />
-                  <div class="wrapper__filter">
-                    <input class="radio__create" type="checkbox" name="work" />
+                  <button type="submit" class="button">Search</button>
+                </form>
+                <h2 class="title">Tag filter</h2>
+                <div class="wrapper__filter">
+                  <div>
+                    <input class="check-boxes" name="work" type="checkbox" />
                     <label for="work">Work</label>
-                    <input class="radio__create" type="checkbox" name="rest" />
+                  </div>
+                  <div>
+                    <input class="check-boxes" type="checkbox" name="rest" />
                     <label for="rest">Rest</label>
+                  </div>
+                  <div>
                     <input
-                      class="radio__create"
+                      class="check-boxes"
                       type="checkbox"
                       name="shopping"
                     />
                     <label for="shopping">Shopping</label>
-                    <input
-                      class="radio__create"
-                      type="checkbox"
-                      name="family"
-                    />
+                  </div>
+                  <div>
+                    <input class="check-boxes" type="checkbox" name="family" />
                     <label for="family">Family</label>
+                  </div>
+                  <div>
                     <input
-                      class="radio__create"
+                      class="check-boxes"
                       type="checkbox"
                       name="celebration"
                     />
                     <label for="celebration">Celebration</label>
-                    <input class="radio__create" type="checkbox" id="help" />
+                  </div>
+                  <div>
+                    <input class="check-boxes" type="checkbox" name="help" />
                     <label for="help">Help</label>
                   </div>
-                  <div class="task__description">
-                    <textarea
-                      type="text"
-                      placeholder="Enter description"
-                      name="dscr"
-                      id="dscr"
-                      required
-                    ></textarea>
-                  </div>
                 </div>
-                <div class="task__time">
-                  <label class="wrapper__time">Time</label>
-                  <input
-                    type="time"
-                    name="cron"
-                    id="cron1"
-                    value="03:15"
-                    min="00:01"
-                    max="06:00"
-                  />
-                  <input
-                    type="time"
-                    name="cron"
-                    id="cron2"
-                    value="03:15"
-                    min="00:01"
-                    max="06:00"
-                  />
-                  <button class="button" type="submit" id="button-create">
-                    Create
-                  </button>
+                <div class="wrapper__buttons">
+                  <button class="button" id="clear">Clear</button>
+                  <button class="button" id="search">Search</button>
                 </div>
               </div>
             </div>
-          </form>
-
-          <h2 class="title">Priority tasks</h2>
-          <div class="new-task">
-            <div class="general-wrapper" id="yes-priority"></div>
           </div>
 
-          <h2 class="title">Tasks</h2>
-          <div class="new-task">
-            <div class="general-wrapper" id="no-priority"></div>
+          <div class="info-container">
+            <div class="info-wrapper">
+              <h2 class="title">Collection</h2>
+              <div class="wrapper">
+                <div class="collect__content">
+                  <p class="wrapper__output_count">Count of your pets:</p>
+                  <div class="output__field" id="pets-count"></div>
+                </div>
+                <div class="collect__content">
+                  <ul class="pets-form">
+                    <li class="pets__wrapper">
+                      <div class="pets" id="1pet"></div>
+                    </li>
+                    <li class="pets__wrapper">
+                      <div class="pets" id="2pet"></div>
+                    </li>
+                    <li class="pets__wrapper">
+                      <div class="pets" id="3pet"></div>
+                    </li>
+                    <li class="pets__wrapper">
+                      <div class="pets" id="4pet"></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="general-task-wrapper">
+          <div class="task">
+            <form class="container-task" action="submit">
+              <h2 class="title">Create task</h2>
+              <div class="general-wrapper">
+                <div class="task-content">
+                  <div class="task-wrapper">
+                    <input
+                      type="name"
+                      placeholder="Enter name"
+                      name="name"
+                      id="name"
+                      required
+                    />
+                    <div class="wrapper__filter">
+                      <div>
+                        <input
+                          class="radio__create"
+                          type="checkbox"
+                          name="work"
+                        />
+                        <label for="work">Work</label>
+                      </div>
+                      <div>
+                        <input
+                          class="radio__create"
+                          type="checkbox"
+                          name="rest"
+                        />
+                        <label for="rest">Rest</label>
+                      </div>
+                      <div>
+                        <input
+                          class="radio__create"
+                          type="checkbox"
+                          name="shopping"
+                        />
+                        <label for="shopping">Shopping</label>
+                      </div>
+                      <div>
+                        <input
+                          class="radio__create"
+                          type="checkbox"
+                          name="celebration"
+                        />
+                        <label for="celebration">Celebration</label>
+                      </div>
+                      <div>
+                        <input
+                          class="check-boxes"
+                          type="checkbox"
+                          name="family"
+                        />
+                        <label for="family">Family</label>
+                      </div>
+                      <div>
+                        <input
+                          class="radio__create"
+                          type="checkbox"
+                          id="help"
+                        />
+                        <label for="help">Help</label>
+                      </div>
+                    </div>
+                    <div class="task__description">
+                      <textarea
+                        type="text"
+                        placeholder="Enter description"
+                        name="dscr"
+                        id="dscr"
+                        required
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="task__time">
+                    <label class="wrapper__time">Time</label>
+                    <input type="datetime-local" name="cron" id="cron1" />
+                    <input type="datetime-local" name="cron" id="cron2" />
+                    <button class="button" type="submit" id="button-create">
+                      Create
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+            <h2 class="title">Priority tasks</h2>
+            <div class="new-task">
+              <div class="general-wrapper" id="yes-priority"></div>
+            </div>
+
+            <h2 class="title">Tasks</h2>
+            <div class="new-task">
+              <div class="general-wrapper" id="no-priority"></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <script src="js/login.js"></script>
     <script src="js/common.js"></script>
     <script src="js/taskTemplate.js"></script>
     <script src="js/fillHtml.js"></script>
     <script src="js/index.js"></script>
+    <script
+      async
+      defer
+      src="https://apis.google.com/js/api.js"
+      onload="gapiLoaded()"
+    ></script>
+    <script
+      async
+      defer
+      src="https://accounts.google.com/gsi/client"
+      onload="gisLoaded()"
+    ></script>
   </body>
 </html>
