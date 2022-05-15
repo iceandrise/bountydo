@@ -1,256 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="google-signin-client_id"
+      content="822723435779-entgq7gcoh7lsobv2pjlg1ihbevfsio6.apps.googleusercontent.com"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./general.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BountyDo</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="./styles.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BountyDo</title>
-</head>
-
-<body>
-
-  <header>
-    <div class="header">
-
+  <body>
+    <header>
       <div class="wrapper__logo">
-        <a href="index.html">
-          <span class="bounty">BountyDo</span>
-        </a>
+        <small>BountyDo</small>
       </div>
-
-      <div class="auth_buttons">
-        <a href="logout.html">
-          <button class="button">Log Out</button>
-        </a>
-        <a href="index.html">
-          <button class="button">Account</button>
-        </a>
+      <div class="wrapper__buttons">
+        <!-- TODO: recreate logout button -->
+        <a class="auth-button" href="logout.html">Log Out</a>
+        <a class="auth-button" href="index.html">Account</a>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <div class="main__row">
     <div class="main">
-
-
-      <div class="container">
-        <div class="modal">
-          <h1 class="modal__title">Counter</h1>
-          <div class="wrapper">
-            <div class="wrapper__output">
-              <label class="wrapper__output_postfix">Completed tasks:</label>
-              <div class="cut"></div>
+      <div class="main-wrapper">
+        <div class="info-container">
+          <div class="info-wrapper">
+            <h2 class="title">Counter</h2>
+            <div class="wrapper">
+              <div class="counter__content">
+                <p class="counter__content_completed">Completed tasks:</p>
+                <div class="output__field" id="completed"></div>
+              </div>
+              <div class="counter__content">
+                <p class="counter__content_remaining">Total tasks:</p>
+                <div class="output__field" id="total"></div>
+              </div>
             </div>
-            <div class="wrapper__output">
-              <label class="wrapper__output_postfix">Remaining tasks:</label>
-              <div class="cut"></div>
+          </div>
+        </div>
+
+        <div class="info-container">
+          <div class="info-wrapper" id="fltr">
+            <h2 class="title">Search</h2>
+            <div class="wrapper">
+              <form action="submit" class="filter-content" name="filter_search">
+                <input
+                  type="text"
+                  name="search"
+                  class="input"
+                  name="input__filter"
+                />
+                <button type="submit" class="button">Search</button>
+              </form>
+              <h2 class="title">Tag filter</h2>
+              <div class="wrapper__filter">
+                <div class="checkbox__wrapper">
+                  <input class="check-boxes" name="work" type="checkbox" />
+                  <label for="work">Work</label>
+                </div>
+                <div class="checkbox__wrapper">
+                  <input class="check-boxes" type="checkbox" name="rest" />
+                  <label for="rest">Rest</label>
+                </div>
+                <div class="checkbox__wrapper">
+                  <input class="check-boxes" type="checkbox" name="shopping" />
+                  <label for="shopping">Shopping</label>
+                </div>
+                <div class="checkbox__wrapper">
+                  <input class="check-boxes" type="checkbox" name="family" />
+                  <label for="family">Family</label>
+                </div>
+                <div class="checkbox__wrapper">
+                  <input
+                    class="check-boxes"
+                    type="checkbox"
+                    name="celebration"
+                  />
+                  <label for="celebration">Celebration</label>
+                </div>
+                <div class="checkbox__wrapper">
+                  <input class="check-boxes" type="checkbox" name="help" />
+                  <label for="help">Help</label>
+                </div>
+              </div>
+              <div class="wrapper__buttons">
+                <button class="button" id="clear">Clear</button>
+                <button class="button" id="search">Search</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-container">
+          <div class="info-wrapper">
+            <h2 class="title">Collection</h2>
+            <div class="wrapper">
+              <div class="collect__content">
+                <p class="wrapper__output_count">Count of your pets:</p>
+                <div class="output__field" id="pets-count"></div>
+              </div>
+              <div class="collect__content">
+                <ul class="pets-form">
+                  <li class="pets__wrapper">
+                    <div class="pets" id="1pet"></div>
+                  </li>
+                  <li class="pets__wrapper">
+                    <div class="pets" id="2pet"></div>
+                  </li>
+                  <li class="pets__wrapper">
+                    <div class="pets" id="3pet"></div>
+                  </li>
+                  <li class="pets__wrapper">
+                    <div class="pets" id="4pet"></div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="container">
-        <div class="filter">
-          <h1 class="filter__title">Search</h1>
-          <div class="wrapper">
-            <div class="wrapper__filter">
-              <input type="text" class="input" name="input__filter" />
-              <button class="button">Search</button>
-            </div>
-            <h3 class="tagfilter__title">Tag filter</h3>
-            <div class="wrapper__filter">
-              <label class="radio__wrapper">
-                <input type="radio" name="work" />
-                Work
-              </label>
-
-              <label class="radio__wrapper">
-                <input type="radio" name="rest" />
-                Rest
-              </label>
-              <label class="radio__wrapper">
-                <input type="radio" name="family" />
-                Family
-              </label>
-
-              <label class="radio__wrapper">
-                <input type="radio" name="shopping" />
-                Shopping
-              </label>
-              <label class="radio__wrapper">
-                <input type="radio" name="celebration" />
-                Celebration
-              </label>
-
-              <label class="radio__wrapper">
-                <input type="radio" name="help" />
-                Help
-              </label>
-            </div>
-
-            <div class="wrapper__buttons">
-              <button class="button">Clear</button>
-              <button class="button">Search</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="container">
-        <div class="collection">
-          <h1 class="collect__title">Collection</h1>
-          <div class="wrapper">
-            <div class="wrapper__collect">
-              <label class="wrapper__output_postfix">Count of your pets:</label>
-              <div class="cut"></div>
-            </div>
-            <div class="wrapper__collect">
-              <ul class="pets__form">
-                <li class="pets__wrapper">
-                  <a href="" class="pets"></a>
-                </li>
-                <li class="pets__wrapper">
-                  <a href="" class="pets"></a>
-                </li>
-                <li class="pets__wrapper">
-                  <a href="" class="pets"></a>
-                </li>
-                <li class="pets__wrapper">
-                  <a href="" class="pets"></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="general__task__wrapper">
-      <div class="container__task">
+      <div class="general-task-wrapper">
         <div class="task">
-          <h1 class="create_task__title">Create task</h1>
-          <div class="general__wrapper">
-            <div class="create__task">
-              <div class="create__task__wrapper">
-                <input type="name" placeholder="Enter name" name="name" required>
-
-                <div class="wrapper__filter">
-                  <label class="radio__wrapper">
-                    <input type="radio" name="work" />
-                    Work
-                  </label>
-
-                  <label class="radio__wrapper">
-                    <input type="radio" name="rest" />
-                    Rest
-                  </label>
-                  <label class="radio__wrapper">
-                    <input type="radio" name="family" />
-                    Family
-                  </label>
-
-                  <label class="radio__wrapper">
-                    <input type="radio" name="shopping" />
-                    Shopping
-                  </label>
-                  <label class="radio__wrapper">
-                    <input type="radio" name="celebration" />
-                    Celebration
-                  </label>
-
-                  <label class="radio__wrapper">
-                    <input type="radio" name="help" />
-                    Help
-                  </label>
+          <form class="container-task" action="submit">
+            <h2 class="title">Create task</h2>
+            <div class="general-wrapper">
+              <div class="task-content">
+                <div class="task-wrapper">
+                  <input
+                    type="name"
+                    placeholder="Enter name"
+                    name="name"
+                    id="name"
+                    required
+                  />
+                  <div class="wrapper__filter">
+                    <div class="checkbox__wrapper">
+                      <input
+                        class="radio__create"
+                        type="checkbox"
+                        name="work"
+                      />
+                      <label for="work">Work</label>
+                    </div>
+                    <div class="checkbox__wrapper">
+                      <input
+                        class="radio__create"
+                        type="checkbox"
+                        name="rest"
+                      />
+                      <label for="rest">Rest</label>
+                    </div>
+                    <div class="checkbox__wrapper">
+                      <input
+                        class="radio__create"
+                        type="checkbox"
+                        name="shopping"
+                      />
+                      <label for="shopping">Shopping</label>
+                    </div>
+                    <div class="checkbox__wrapper">
+                      <input
+                        class="radio__create"
+                        type="checkbox"
+                        name="celebration"
+                      />
+                      <label for="celebration">Celebration</label>
+                    </div>
+                    <div class="checkbox__wrapper">
+                      <input
+                        class="check-boxes"
+                        type="checkbox"
+                        name="family"
+                      />
+                      <label for="family">Family</label>
+                    </div>
+                    <div class="checkbox__wrapper">
+                      <input class="radio__create" 
+                      type="checkbox"
+                      id="help" />
+                      <label for="help">Help</label>
+                    </div>
+                  </div>
+                  <div class="task__description">
+                    <textarea
+                      type="text"
+                      placeholder="Enter description"
+                      name="dscr"
+                      id="dscr"
+                      required
+                    ></textarea>
+                  </div>
                 </div>
-                <div class="description__task">
-                  <textarea type="description" placeholder="Enter description" name="dscr" required></textarea>
+                <div class="task__time">
+                  <label class="wrapper__time">Time</label>
+                  <input
+                    type="time"
+                    name="cron"
+                    id="cron1"
+                    value="03:15"
+                    min="00:01"
+                    max="06:00"
+                  />
+                  <input
+                    type="time"
+                    name="cron"
+                    id="cron2"
+                    value="03:15"
+                    min="00:01"
+                    max="06:00"
+                  />
+                  <button class="button" type="submit" id="button-create">
+                    Create
+                  </button>
                 </div>
-              </div>
-              <div class="time__task">
-                <label class="wrapper__time">Time</label>
-                <input type="time" name="cron" value="03:15" min="00:01" max="06:00">
-                <input type="time" name="cron" value="03:15" min="00:01" max="06:00">
-                <button class="button">Create</button>
               </div>
             </div>
+          </form>
+
+          <h2 class="title">Priority tasks</h2>
+          <div class="new-task">
+            <div class="general-wrapper" id="yes-priority"></div>
           </div>
 
-
-          <h1 class="create_task__title">Priority tasks</h1>
-          <div class="general__wrapper">
-            <div class="create__task">
-              <div class="create__task__style">
-                <input type="name" placeholder="Enter name" name="name" value="Buy food for saturday" required>
-
-                <div class="wrapper__filter">
-                  <label class="radio__wrapper">
-                    <input type="radio" name="rest2" checked />
-                    Rest
-                  </label>
-                </div>
-                <div class="description__task">
-                  <textarea type="description" placeholder="Shop closes at 11pm..." name="dscr" required></textarea>
-                </div>
-              </div>
-              <div class="time__task">
-                <input type="image" src="img/staract.png" width="45px" height="45px">
-                <label class="wrapper__time">Time</label>
-                <input type="time" name="cron" value="17:30" min="00:01" max="06:00">
-                <input type="time" name="cron" value="18:00" min="00:01" max="06:00">
-
-              </div>
-
-            </div>
-            <div class="button__column">
-              <button class="button">Update</button>
-              <button class="button">Comlete!</button>
-              <button class="button">Delete</button>
-            </div>
+          <h2 class="title">Tasks</h2>
+          <div class="new-task">
+            <div class="general-wrapper" id="no-priority"></div>
           </div>
-
-          <h1 class="create_task__title">Tasks</h1>
-          <div class="general__wrapper">
-            <div class="create__task">
-              <div class="create__task__style">
-                <input type="name" placeholder="Enter name" name="name" value="Water the neighbors' flowers" required>
-
-                <div class="wrapper__filter">
-                  <label class="radio__wrapper">
-                    <input type="radio" name="help2" checked />
-                    Help
-                  </label>
-                </div>
-                <div class="description__task">
-                  <textarea type="description" placeholder="Keys under the mat" name="dscr" required></textarea>
-                </div>
-              </div>
-              <div class="time__task">
-                <input type="image" src="img/starnon.png" width="45px" height="45px">
-                <label class="wrapper__time">Time</label>
-                <input type="time" name="cron" value="20:00" min="00:01" max="06:00">
-                <input type="time" name="cron" value="20:10" min="00:01" max="06:00">
-
-              </div>
-
-            </div>
-            <div class="button__column">
-              <button class="button">Update</button>
-              <button class="button">Comlete!</button>
-              <button class="button">Delete</button>
-            </div>
-          </div>
-
-
-
         </div>
       </div>
     </div>
-  </div>
-
-
-</body>
-
+    <script src="js/login.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/taskTemplate.js"></script>
+    <script src="js/fillHtml.js"></script>
+    <script src="js/index.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  </body>
 </html>

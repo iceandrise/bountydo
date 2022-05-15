@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  :root {
+    --main-bg-color: darkgreen;
+    --secondary-bg-color: forestgreen;
+    --logo-bg-color: rgb(238, 238, 238);
+    --background-color: rgb(139, 199, 139);
+    --shadow-bg-color: rgba(0, 0, 0, 0.4);
+    --shadow-light-color: rgb(199, 238, 199);
+  }
+  
+  html,
+  body {
+    height: 100%;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  }
+  
+  header {
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: var(--secondary-bg-color);
+    display: flex;
+    padding: 10px;
+  }
+  
+  .wrapper__logo {
+    display: flex;
+    align-items: center;
+    font-size: 80px;
+    text-align: center;
+    font-variant: small-caps;
+    color: var(--logo-bg-color);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .wrapper__buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .auth-button {
+    display: block;
+    padding: 25px;
+    color: var(--logo-bg-color);
+    text-decoration: none;
+    background-color: var(--main-bg-color);
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .auth-button:nth-child(n + 2) {
+    margin: 0 0 0 10px;
+  }
+  
+  /* TODO: remove it */
+  .title {
+    display: flex;
+    justify-content: center;
+    color: var(--main-bg-color);
+    margin: 10px 0;
+  }
+  
+  
+  @media (max-width: 600px) {
+    .auth-button {
+      padding: 15px;
+      font-size: 17px;
+    }
+    
+    .wrapper__logo {
+      font-size: 60px;
+    }
+  }
+  
+  @media (max-width: 460px) {
+    .auth-button {
+      padding: 10px;
+      font-size: 13px;
+    }
+    .wrapper__logo {
+      font-size: 40px;
+    }
+  }
