@@ -39,7 +39,7 @@ function gisLoaded() {
 
 function maybeEnableButtons() {
   if (gapiInited && gisInited) {
-    document.getElementById("authorize_button").style.display = "static";
+    document.getElementById("authorize_button").style.display = "unset";
   }
 }
 
@@ -48,7 +48,7 @@ function handleAuthClick() {
     if (resp.error !== undefined) {
       throw resp;
     }
-    document.getElementById("signout_button").style.display = "static";
+    document.getElementById("signout_button").style.display = "unset";
     document.getElementsByClassName("main")[0].style.display = "grid";
     document.getElementsByClassName("wrapper-logout")[0].style =
       "display: none;";
@@ -68,11 +68,11 @@ function handleSignoutClick() {
   if (token !== null) {
     google.accounts.oauth2.revoke(token.access_token);
     gapi.client.setToken("");
-    document.getElementById("authorize_button").style.display = "static";
+    document.getElementById("authorize_button").style.display = "unset";
     document.getElementById("signout_button").style.display = "none";
     document.getElementsByClassName("main")[0].style.display = "none";
     document.getElementsByClassName("wrapper-logout")[0].style =
-      "display: static;";
+      "display: unset;";
   }
 }
 
