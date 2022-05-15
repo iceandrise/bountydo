@@ -64,15 +64,6 @@ document.forms.filter_search.addEventListener("submit", (e) => {
 addTaskBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
-
-
-  /*createCalendarMark(
-    nameTask?.value || "No name",
-    new Date(timeTask1?.value),
-    new Date(timeTask2?.value),
-    descrTask?.value
-  );*/
-
   var now = new Date()
   var start = new Date(timeTask1.value)
   var end = new Date(timeTask2.value)
@@ -95,6 +86,12 @@ addTaskBtn.addEventListener("click", (e) => {
       );
       updateLocalStorage();
       fillHtml();
+      createCalendarMark(
+        nameTask?.value || "No name",
+        new Date(timeTask1?.value),
+        new Date(timeTask2?.value),
+        descrTask?.value
+      );
     }else {
       alert("You cannot use a date that has already passed!");
 
