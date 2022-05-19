@@ -1,0 +1,32 @@
+@import '../../styles/colors.css';
+
+.spinner {
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  bottom: 50%;
+  right: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+
+  border: 10px solid var(--logo-bg-color);
+  border-top: 10px solid var(--secondary-bg-color);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner__layer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}

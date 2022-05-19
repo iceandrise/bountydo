@@ -1,0 +1,158 @@
+.title {
+  display: flex;
+  justify-content: center;
+  color: var(--main-bg-color);
+  margin: 10px 0;
+}
+
+.main {
+  /*display: flex; */
+  display: grid;
+  grid-template-columns: minmax(320px, 450px) minmax(320px, 1fr);
+  grid-gap: 10px;
+  justify-content: center;
+}
+
+@media (max-width: 1040px) {
+  .main {
+    grid-template-columns: minmax(320px, 450px)
+  }
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.wrapper__buttons {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.radio__wrapper {
+  font-size: 14px;
+  margin: 3px 3px 10px 3px;
+}
+
+.task {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--main-bg-color);
+  background: var(--shadow-light-color);
+
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+
+  box-shadow: inset 0px 0px 15px var(--shadow-light-color);
+  -moz-box-shadow: inset 0px 0px 15px var(--shadow-light-color);
+  -webkit-box-shadow: inset 0px 0px 15px var(--shadow-light-color);
+}
+
+textarea {
+  width: 320px;
+  height: 100px;
+  resize: none;
+}
+
+.button__column {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.task-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1084px) {
+  
+  header{
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 1160px) {
+  
+  header{
+    width: 100%;
+  }
+  textarea {
+    width: 250px;
+  }
+  .main-wrapper{
+    justify-content: unset;
+  }
+}
+
+
+@media (max-width: 1050px) {
+  
+  header{
+    width: 100%;
+  }
+  textarea {
+    width: 250px;
+  }
+  .main-wrapper{
+    justify-content: unset;
+  }
+
+
+}
+
+@media (max-width: 1122px) {
+  
+  header{
+    width: 100%;
+  }
+  textarea {
+    width: 250px;
+  }
+  .main-wrapper{
+    justify-content: unset;
+  }
+  
+}
+
+
+@media (max-width: 1046px) {
+  header{
+    width: 100%;
+  }
+}
+
+@media (max-width: 710px) {
+  .button__column {
+    margin: 10px 0 0 0;
+    justify-content: unset;
+  }
+  .general-task-wrapper {
+    justify-content: unset;
+  }
+  textarea {
+    width: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+  .task-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .task__time {
+    width: 100%;
+  }
+}
+
+@media (max-width: 430px) {
+  .general-task-wrapper {
+    justify-content: unset;
+  }
+  textarea {
+    width: 250px;
+  }
+}

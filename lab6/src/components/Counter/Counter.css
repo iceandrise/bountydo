@@ -1,0 +1,54 @@
+@import '../../styles/colors.css';
+
+.info-container {
+  display: flex;
+}
+
+.info-wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border: 1px solid var(--main-bg-color);
+  background: var(--shadow-light-color);
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  color: var(--main-bg-color);
+  margin: 10px 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.counter__content {
+  display: inline-flex;
+  justify-content: space-between;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.counter__content_remaining,
+.counter__content_completed {
+  color: var(--main-bg-color);
+}
+
+.output__field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+  border: 1px solid var(--shadow-bg-color);
+  border-radius: 6px;
+  background-color: var(--logo-bg-color);
+}

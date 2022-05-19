@@ -1,0 +1,8 @@
+:root {
+  --main-bg-color: darkgreen;
+  --secondary-bg-color: forestgreen;
+  --logo-bg-color: rgb(238, 238, 238);
+  --background-color: rgb(139, 199, 139);
+  --shadow-bg-color: rgba(0, 0, 0, 0.4);
+  --shadow-light-color: rgb(199, 238, 199);
+}
