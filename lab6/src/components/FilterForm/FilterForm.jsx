@@ -53,7 +53,7 @@ export const FIlterForm = () => {
     e.preventDefault();
 
     setFilters({
-      search: search.trim().length ? search: undefined,
+      search: search?.trim().length ? search: undefined,
       radio: {
         ...checkboxes
       }
